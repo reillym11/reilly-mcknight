@@ -36,9 +36,8 @@ function Index() {
           </div>
 
           <div className="text-sm leading-relaxed max-w-sm space-y-6 mb-12">
-            <p>Studying CS &amp; Economics at Stanford.</p>
-            <p>Bullish on AI Agents for GTM, open source intelligence, and national security.</p>
-            <p className="italic">I want to be in the room where it happens.</p>
+            <p>Studying CS &amp; Economics at Stanford</p>
+            <p className="italic">I want to be in the room where it happens</p>
           </div>
           <a
             href={`mailto:${profile.email}`}

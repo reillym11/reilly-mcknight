@@ -49,7 +49,19 @@ export const sections: Section[] = [
     paragraphs: [
       {
         lead: "September 2024 – Present:",
-        body: "Venture Fellow @ Xfund",
+        body: (
+          <>
+            Venture Fellow @{" "}
+            <a
+              href="https://www.xfund.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+            >
+              Xfund
+            </a>
+          </>
+        ),
       },
       <>
         Working with{" "}
@@ -65,7 +77,19 @@ export const sections: Section[] = [
       </>,
       {
         lead: "November 2024 – May 2025:",
-        body: "Venture Scout @ Microsoft for Startups",
+        body: (
+          <>
+            Venture Scout @{" "}
+            <a
+              href="https://www.microsoft.com/en-us/startups"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+            >
+              Microsoft for Startups
+            </a>
+          </>
+        ),
       },
       "Inaugural cohort of 6 six students.",
     ],
@@ -95,12 +119,19 @@ export const sections: Section[] = [
         lead: "Winter 2026:",
         body: "AI Ethics & Policy @ Oxford",
       },
-      "Placeholder sentence about the Oxford term and what I took away from it.",
+      <>
+        <Link
+          to="/writing"
+          className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+        >
+          See more
+        </Link>
+        <span aria-hidden className="ml-1 text-foreground/60">›</span>
+      </>,
       {
         lead: "Summer 2025:",
         body: "Auckland FC & New Zealand",
       },
-      "Placeholder sentence about the summer in Auckland.",
     ],
     link: { label: "See more", to: "/writing" },
   },

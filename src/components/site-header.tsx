@@ -17,8 +17,8 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="flex items-center justify-between gap-5 px-6 md:px-10 py-4 border-b border-border text-sm">
-      <span className="italic text-foreground/80">
+    <header className="flex items-center justify-between gap-5 pl-6 md:pl-10 pr-8 md:pr-14 py-4 border-b border-border text-sm">
+      <span className="italic font-bold text-base md:text-lg text-foreground/80">
         {typed}
         <span aria-hidden className="inline-block w-px h-4 align-middle ml-0.5 bg-foreground/60 animate-pulse" />
       </span>
