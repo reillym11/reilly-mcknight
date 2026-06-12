@@ -14,13 +14,12 @@ export const Route = createFileRoute("/adventures")({
   }),
   component: () => (
     <ListPage
-      number="03"
-      title="Adventures"
-      intro="Sometimes I move a long distance. Placeholder list — swap in real adventures."
+      title="On Campus"
+      intro="What I'm up to at Stanford."
       items={[
-        { title: "Adventure One", meta: "Summer 2025", description: "Where, why, and what you took away from it." },
-        { title: "Adventure Two", meta: "Winter 2024", description: "Where, why, and what you took away from it." },
-        { title: "Adventure Three", meta: "2023", description: "Where, why, and what you took away from it." },
+        { title: "September 2023 – May 2026: COO @ Stanford BASES", description: "Where, why, and what you took away from it." },
+        { title: "Adventure Two", description: "Where, why, and what you took away from it." },
+        { title: "Adventure Three", description: "Where, why, and what you took away from it." },
       ]}
     />
   ),
