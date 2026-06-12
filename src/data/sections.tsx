@@ -74,12 +74,15 @@ export const sections: Section[] = [
     number: "03",
     title: "On Campus",
     paragraphs: [
-      <Link
-        to="/adventures"
-        className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
-      >
-        What I'm up to at Stanford
-      </Link>,
+      <>
+        <Link
+          to="/adventures"
+          className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+        >
+          What I'm up to at Stanford
+        </Link>
+        <span aria-hidden className="ml-1 text-foreground/60">›</span>
+      </>,
     ],
   },
   {
@@ -103,12 +106,15 @@ export const sections: Section[] = [
     number: "05",
     title: "Tidbits",
     paragraphs: [
-      <Link
-        to="/favorites"
-        className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
-      >
-        Fun facts about me
-      </Link>,
+      <>
+        <Link
+          to="/favorites"
+          className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+        >
+          Fun facts about me
+        </Link>
+        <span aria-hidden className="ml-1 text-foreground/60">›</span>
+      </>,
     ],
   },
 ];
