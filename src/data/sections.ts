@@ -14,7 +14,7 @@ export type Section = {
 export const sections: Section[] = [
   {
     number: "01",
-    title: "Work",
+    title: "Building",
     paragraphs: [
       {
         lead: "Month Year – Present:",
@@ -32,33 +32,33 @@ export const sections: Section[] = [
   },
   {
     number: "02",
-    title: "Projects",
+    title: "Investing",
     paragraphs: [
-      "Recently, I've been building a handful of small apps and experiments — mostly around [topic]. I'm still learning, but I hope you'll find something interesting.",
+      "Notes on what I'm tracking in venture and markets — companies I'm spending time with, theses I'm forming, and the questions I haven't answered yet.",
     ],
     link: { label: "All projects", to: "/projects" },
   },
   {
     number: "03",
-    title: "Adventures",
+    title: "On Campus",
     paragraphs: [
-      "I sometimes get the urge to do something adventurous and potentially risky. It usually involves moving a long distance.",
+      "What I'm up to at Stanford — classes I'm loving, clubs and groups I'm part of, and the people I keep learning from.",
     ],
     link: { label: "All adventures", to: "/adventures" },
   },
   {
     number: "04",
-    title: "Writing",
+    title: "Sidequests",
     paragraphs: [
-      "Every now and then, I have thoughts that warrant more than a tweet. I mostly write about tech, economics, and life.",
+      "Detours, experiments, and trips that probably weren't on the plan. Usually fun, occasionally regrettable.",
     ],
     link: { label: "All writing", to: "/writing" },
   },
   {
     number: "05",
-    title: "Favorites",
+    title: "Tidbits",
     paragraphs: [
-      "I keep track of my favorite books, blogs, movies, etc. If you have any recs please let me know!",
+      "Books, essays, films, and other small things I keep coming back to. Recs always welcome.",
     ],
     link: { label: "All favorites", to: "/favorites" },
   },
