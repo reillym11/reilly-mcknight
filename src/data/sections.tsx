@@ -155,7 +155,7 @@ export const sections: Section[] = [
           to="/favorites"
           className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
         >
-          Fun facts about me
+          More about me and random things I love
         </Link>
         <span aria-hidden className="ml-1 text-foreground/60">
           ›
