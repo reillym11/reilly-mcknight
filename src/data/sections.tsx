@@ -1,11 +1,13 @@
+import type { ReactNode } from "react";
+
 export type Section = {
   number: string;
   title: string;
   paragraphs: Array<
-    | string
+    | ReactNode
     | {
         lead?: string;
-        body: string | React.ReactNode;
+        body: ReactNode;
       }
   >;
   link?: { label: string; to: string };
@@ -17,26 +19,40 @@ export const sections: Section[] = [
     title: "Building",
     paragraphs: [
       {
-        lead: "Month Year – Present:",
-        body: "Current role description @ Company. One or two sentences on what you do day-to-day and what you're learning.",
+        lead: "June 2026 – Present:",
+        body: (
+          <>
+            Building AI Agents @{" "}
+            <a
+              href="https://www.attention.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+            >
+              Attention
+            </a>
+            .
+          </>
+        ),
       },
+      "Placeholder sentence describing what I'm working on at Attention day-to-day.",
       {
-        lead: "Month Year – Month Year:",
-        body: "Previous role @ Company. What you worked on, who you worked with, and one memorable thing about the experience.",
+        lead: "March 2026 – Present:",
+        body: "Founding FDE @ Stealth.",
       },
-      {
-        lead: "Other:",
-        body: "Side commitments, advising, or anything else worth mentioning. Short and concrete.",
-      },
+      "Placeholder sentence describing the stealth project and what I'm building.",
     ],
   },
   {
     number: "02",
     title: "Investing",
     paragraphs: [
-      "Notes on what I'm tracking in venture and markets — companies I'm spending time with, theses I'm forming, and the questions I haven't answered yet.",
+      {
+        lead: "September 2024 – Present:",
+        body: "Venture Fellow @ Xfund.",
+      },
+      "Placeholder sentence about what I'm focused on at Xfund and the kinds of founders I love meeting.",
     ],
-    link: { label: "All projects", to: "/projects" },
   },
   {
     number: "03",
