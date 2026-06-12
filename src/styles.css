@@ -19,8 +19,8 @@
  */
 
 @theme inline {
-  --font-mono: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Libre Baskerville", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: "Cormorant Garamond", Georgia, serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -143,6 +143,6 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-mono);
-    font-feature-settings: normal;
+    font-feature-settings: "ss01" on, "cv11" on;
   }
 }
