@@ -8,6 +8,7 @@ export const profile = {
     twitter: "https://twitter.com/yourhandle",
     linkedin: "https://linkedin.com/in/yourhandle",
     github: "https://github.com/yourhandle",
+    resume: "#",
   },
   // Replace with a real portrait URL or imported asset later.
   photo: "",
