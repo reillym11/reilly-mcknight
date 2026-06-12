@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export type ListItem = {
   title: string;
@@ -21,7 +21,6 @@ export function ListPage({
 }) {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SiteHeader />
       <main className="max-w-3xl mx-auto px-6 md:px-10 py-12">
         <Link to="/" className="text-sm text-muted-foreground hover:text-foreground underline underline-offset-4 decoration-foreground/30">
           ‹ back
@@ -51,6 +50,7 @@ export function ListPage({
           ))}
         </ul>
       </main>
+      <SiteFooter />
     </div>
   );
 }
