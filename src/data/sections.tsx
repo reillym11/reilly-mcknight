@@ -35,12 +35,23 @@ export const sections: Section[] = [
           </>
         ),
       },
-      "Placeholder sentence describing what I'm working on at Attention day-to-day.",
+      "Forward Deployed Engineering. Automating sales workflows for leading GTM teams in tech.",
       {
         lead: "March 2026 – Present:",
         body: "Founding Forward Deployed Eng @ Stealth Startup",
       },
-      "Placeholder sentence describing the stealth project and what I'm building.",
+      <>
+        Building in AI OSINT with a cracked team. Accepted into{" "}
+        <a
+          href="https://www.diu.mil/"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+        >
+          Defense Innovation Unit
+        </a>{" "}
+        DISF-C Accelerator.
+      </>,
     ],
   },
   {
