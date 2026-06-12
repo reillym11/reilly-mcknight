@@ -52,7 +52,7 @@ export const sections: Section[] = [
         body: "Venture Fellow @ Xfund",
       },
       <>
-        Worked with{" "}
+        Working with{" "}
         <a
           href="https://www.linkedin.com/in/brandonfarwell/"
           target="_blank"
@@ -67,7 +67,7 @@ export const sections: Section[] = [
         lead: "November 2024 – May 2025:",
         body: "Venture Scout @ Microsoft for Startups",
       },
-      "Placeholder sentence about my time scouting for Microsoft for Startups.",
+      "Inaugural cohort of 6 six students.",
     ],
   },
   {
@@ -81,7 +81,9 @@ export const sections: Section[] = [
         >
           What I'm up to at Stanford
         </Link>
-        <span aria-hidden className="ml-1 text-foreground/60">›</span>
+        <span aria-hidden className="ml-1 text-foreground/60">
+          ›
+        </span>
       </>,
     ],
   },
@@ -113,7 +115,9 @@ export const sections: Section[] = [
         >
           Fun facts about me
         </Link>
-        <span aria-hidden className="ml-1 text-foreground/60">›</span>
+        <span aria-hidden className="ml-1 text-foreground/60">
+          ›
+        </span>
       </>,
     ],
   },
