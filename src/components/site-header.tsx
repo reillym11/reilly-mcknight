@@ -1,26 +1,47 @@
 import { Link } from "@tanstack/react-router";
 import { profile } from "@/data/profile";
 
-export function SiteHeader() {
+export function SiteHeader({ anchors = false }: { anchors?: boolean }) {
   return (
-    <header className="flex items-center justify-between px-6 md:px-10 py-5 border-b border-border">
-      <Link to="/" className="flex items-center gap-3 text-sm">
-        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border bg-muted text-[10px] tracking-tight">
-          {profile.initials.replace(/\./g, "").slice(0, 2)}
-        </span>
-        <span className="tracking-tight">{profile.initials}</span>
-      </Link>
-      <nav className="flex items-center gap-5 text-sm">
-        <a href={profile.socials.twitter} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity" aria-label="Twitter / X">
-          <XIcon />
-        </a>
-        <a href={profile.socials.linkedin} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity inline-flex items-center gap-1.5">
-          <LinkedInIcon /> <span className="hidden sm:inline">LinkedIn</span>
-        </a>
-        <a href={profile.socials.github} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity" aria-label="GitHub">
-          <GitHubIcon />
-        </a>
-      </nav>
+    <header className="sticky top-0 z-40 backdrop-blur-md bg-background/75 border-b border-border/70">
+      <div className="max-w-5xl mx-auto flex items-center justify-between px-6 md:px-8 py-4">
+        <Link to="/" className="flex items-center gap-2.5 group">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-foreground text-background text-[11px] font-semibold tracking-tight transition-transform group-hover:scale-105">
+            {profile.initials}
+          </span>
+          <span className="text-sm font-medium tracking-tight hidden sm:inline">{profile.name}</span>
+        </Link>
+        <nav className="flex items-center gap-1 sm:gap-2 text-sm">
+          {anchors && (
+            <div className="hidden md:flex items-center gap-1 mr-2">
+              {[
+                ["About", "#about"],
+                ["Experience", "#experience"],
+                ["Projects", "#projects"],
+                ["Writing", "#writing"],
+                ["Now", "#now"],
+              ].map(([label, href]) => (
+                <a
+                  key={href}
+                  href={href}
+                  className="px-3 py-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          )}
+          <a href={profile.socials.twitter} target="_blank" rel="noreferrer noopener" className="p-2 rounded-md hover:bg-muted transition-colors" aria-label="Twitter / X"><XIcon /></a>
+          <a href={profile.socials.github} target="_blank" rel="noreferrer noopener" className="p-2 rounded-md hover:bg-muted transition-colors" aria-label="GitHub"><GitHubIcon /></a>
+          <a href={profile.socials.linkedin} target="_blank" rel="noreferrer noopener" className="p-2 rounded-md hover:bg-muted transition-colors" aria-label="LinkedIn"><LinkedInIcon /></a>
+          <a
+            href={`mailto:${profile.email}`}
+            className="ml-1 inline-flex items-center rounded-md bg-foreground text-background px-3 py-1.5 text-sm font-medium hover:bg-foreground/85 transition-colors"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
     </header>
   );
 }
