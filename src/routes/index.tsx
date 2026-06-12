@@ -3,6 +3,7 @@ import { profile } from "@/data/profile";
 import { sections } from "@/data/sections";
 import { SiteFooter } from "@/components/site-footer";
 import { SectionBlock } from "@/components/section-block";
+import portrait from "@/assets/portrait.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,14 +30,8 @@ function Index() {
             {profile.name}
           </h1>
 
-          <div className="aspect-[4/5] w-full max-w-sm border border-border bg-muted mb-8 overflow-hidden">
-            {profile.photo ? (
-              <img src={profile.photo} alt={profile.name} className="h-full w-full object-cover" />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center text-xs text-muted-foreground">
-                portrait placeholder
-              </div>
-            )}
+          <div className="aspect-square w-40 md:w-44 border border-border bg-muted mb-8 overflow-hidden rounded-sm">
+            <img src={portrait.url} alt={profile.name} className="h-full w-full object-cover" />
           </div>
 
           <p className="text-sm leading-relaxed max-w-sm mb-6">{profile.bio}</p>
