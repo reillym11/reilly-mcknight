@@ -3,7 +3,7 @@ export const profile = {
   initials: "R.M.",
   greeting: "",
   email: "reillym@stanford.edu",
-  bio: "Studying CS & Economics at Stanford. Broadly, I'm interested in [your interests here] — replace this paragraph with a few sentences about what you care about, what you're building, and what you're exploring right now.",
+  bio: "Studying CS & Economics at Stanford. Bullish on AI Agents for GTM, open source intelligence, and national security. I want to be in the room where it happens.",
   socials: {
     twitter: "https://twitter.com/yourhandle",
     linkedin: "https://linkedin.com/in/yourhandle",
