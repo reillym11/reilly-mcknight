@@ -33,7 +33,11 @@ function Index() {
             <img src={portrait.url} alt={profile.name} className="h-full w-full object-cover" />
           </div>
 
-          <p className="text-sm leading-relaxed max-w-sm mb-6">{profile.bio}</p>
+          <div className="text-sm leading-relaxed max-w-sm space-y-3 mb-12">
+            <p>Studying CS &amp; Economics at Stanford.</p>
+            <p>Bullish on AI Agents for GTM, open source intelligence, and national security.</p>
+            <p className="italic">I want to be in the room where it happens.</p>
+          </div>
           <a
             href={`mailto:${profile.email}`}
             className="text-sm underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
