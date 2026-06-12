@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
 
 export type Section = {
   number: string;
@@ -31,14 +32,13 @@ export const sections: Section[] = [
             >
               Attention
             </a>
-            .
           </>
         ),
       },
       "Placeholder sentence describing what I'm working on at Attention day-to-day.",
       {
         lead: "March 2026 – Present:",
-        body: "Founding FDE @ Stealth.",
+        body: "Founding Forward Deployed Eng @ Stealth Startup",
       },
       "Placeholder sentence describing the stealth project and what I'm building.",
     ],
@@ -49,12 +49,23 @@ export const sections: Section[] = [
     paragraphs: [
       {
         lead: "September 2024 – Present:",
-        body: "Venture Fellow @ Xfund.",
+        body: "Venture Fellow @ Xfund",
       },
-      "Placeholder sentence about what I'm focused on at Xfund and the kinds of founders I love meeting.",
+      <>
+        Worked with{" "}
+        <a
+          href="https://www.linkedin.com/in/brandonfarwell/"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+        >
+          Brandon Farwell
+        </a>{" "}
+        to back lateral-thinking student founders
+      </>,
       {
         lead: "November 2024 – May 2025:",
-        body: "Venture Scout @ Microsoft for Startups.",
+        body: "Venture Scout @ Microsoft for Startups",
       },
       "Placeholder sentence about my time scouting for Microsoft for Startups.",
     ],
@@ -63,9 +74,13 @@ export const sections: Section[] = [
     number: "03",
     title: "On Campus",
     paragraphs: [
-      "What I'm up to at Stanford.",
+      <Link
+        to="/adventures"
+        className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+      >
+        What I'm up to at Stanford
+      </Link>,
     ],
-    link: { label: "See more", to: "/adventures" },
   },
   {
     number: "04",
@@ -73,12 +88,12 @@ export const sections: Section[] = [
     paragraphs: [
       {
         lead: "Winter 2026:",
-        body: "AI Ethics & Policy @ Oxford.",
+        body: "AI Ethics & Policy @ Oxford",
       },
       "Placeholder sentence about the Oxford term and what I took away from it.",
       {
         lead: "Summer 2025:",
-        body: "Auckland FC & New Zealand.",
+        body: "Auckland FC & New Zealand",
       },
       "Placeholder sentence about the summer in Auckland.",
     ],
@@ -88,8 +103,12 @@ export const sections: Section[] = [
     number: "05",
     title: "Tidbits",
     paragraphs: [
-      "Fun facts about me.",
+      <Link
+        to="/favorites"
+        className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+      >
+        Fun facts about me
+      </Link>,
     ],
-    link: { label: "See more", to: "/favorites" },
   },
 ];
