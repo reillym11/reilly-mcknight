@@ -5,7 +5,7 @@ export type Section = {
     | string
     | {
         lead?: string;
-        body: string;
+        body: string | React.ReactNode;
       }
   >;
   link?: { label: string; to: string };

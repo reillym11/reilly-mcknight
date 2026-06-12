@@ -3,9 +3,6 @@ import { profile } from "@/data/profile";
 export function SiteFooter() {
   return (
     <footer className="flex items-center justify-end gap-5 px-6 md:px-10 py-5 border-t border-border text-sm">
-      <a href={profile.socials.twitter} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity" aria-label="Twitter / X">
-        <XIcon />
-      </a>
       <a href={profile.socials.linkedin} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity inline-flex items-center gap-1.5">
         <LinkedInIcon /> <span className="hidden sm:inline">LinkedIn</span>
       </a>
@@ -16,13 +13,6 @@ export function SiteFooter() {
   );
 }
 
-function XIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M18.244 2H21.5l-7.5 8.57L23 22h-6.91l-5.41-7.07L4.5 22H1.24l8.03-9.17L1 2h7.09l4.89 6.47L18.244 2Zm-1.21 18h1.91L7.06 4H5.05l11.984 16Z" />
-    </svg>
-  );
-}
 function LinkedInIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
