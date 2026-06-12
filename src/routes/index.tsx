@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { profile } from "@/data/profile";
 import { sections } from "@/data/sections";
 import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { SectionBlock } from "@/components/section-block";
 import portrait from "@/assets/portrait.jpeg.asset.json";
 
@@ -22,6 +23,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SiteHeader />
       <main className="grid md:grid-cols-[2fr_3fr]">
         {/* Left column — identity */}
         <aside className="px-6 md:px-10 py-12 md:border-r border-border md:sticky md:top-0 md:self-start md:max-h-screen md:overflow-y-auto">
@@ -33,7 +35,7 @@ function Index() {
             <img src={portrait.url} alt={profile.name} className="h-full w-full object-cover" />
           </div>
 
-          <div className="text-sm leading-relaxed max-w-sm space-y-3 mb-12">
+          <div className="text-sm leading-relaxed max-w-sm space-y-6 mb-12">
             <p>Studying CS &amp; Economics at Stanford.</p>
             <p>Bullish on AI Agents for GTM, open source intelligence, and national security.</p>
             <p className="italic">I want to be in the room where it happens.</p>
