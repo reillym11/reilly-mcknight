@@ -1,27 +1,18 @@
-import { Link } from "@tanstack/react-router";
 import { profile } from "@/data/profile";
 
-export function SiteHeader() {
+export function SiteFooter() {
   return (
-    <header className="flex items-center justify-between px-6 md:px-10 py-5 border-b border-border">
-      <Link to="/" className="flex items-center gap-3 text-sm">
-        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border bg-muted text-[10px] tracking-tight">
-          {profile.initials.replace(/\./g, "").slice(0, 2)}
-        </span>
-        <span className="tracking-tight">{profile.initials}</span>
-      </Link>
-      <nav className="flex items-center gap-5 text-sm">
-        <a href={profile.socials.twitter} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity" aria-label="Twitter / X">
-          <XIcon />
-        </a>
-        <a href={profile.socials.linkedin} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity inline-flex items-center gap-1.5">
-          <LinkedInIcon /> <span className="hidden sm:inline">LinkedIn</span>
-        </a>
-        <a href={profile.socials.github} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity" aria-label="GitHub">
-          <GitHubIcon />
-        </a>
-      </nav>
-    </header>
+    <footer className="flex items-center justify-end gap-5 px-6 md:px-10 py-5 border-t border-border text-sm">
+      <a href={profile.socials.twitter} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity" aria-label="Twitter / X">
+        <XIcon />
+      </a>
+      <a href={profile.socials.linkedin} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity inline-flex items-center gap-1.5">
+        <LinkedInIcon /> <span className="hidden sm:inline">LinkedIn</span>
+      </a>
+      <a href={profile.socials.github} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity" aria-label="GitHub">
+        <GitHubIcon />
+      </a>
+    </footer>
   );
 }
 

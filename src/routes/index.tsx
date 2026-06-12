@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { profile } from "@/data/profile";
 import { sections } from "@/data/sections";
-import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import { SectionBlock } from "@/components/section-block";
 
 export const Route = createFileRoute("/")({
@@ -21,7 +21,6 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SiteHeader />
       <main className="grid md:grid-cols-2">
         {/* Left column — identity */}
         <aside className="px-6 md:px-10 py-12 md:border-r border-border md:sticky md:top-0 md:self-start md:max-h-screen md:overflow-y-auto">
@@ -56,6 +55,7 @@ function Index() {
           ))}
         </div>
       </main>
+      <SiteFooter />
     </div>
   );
 }
