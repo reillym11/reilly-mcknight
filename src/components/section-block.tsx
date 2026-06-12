@@ -18,7 +18,7 @@ export function SectionBlock({ section, last }: { section: Section; last?: boole
             return (
               <p key={i}>
                 {entry.lead && <span className="font-semibold">{entry.lead}</span>}{" "}
-                {entry.body}
+                <span className="font-semibold">{entry.body}</span>
               </p>
             );
           }
