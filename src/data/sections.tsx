@@ -52,30 +52,44 @@ export const sections: Section[] = [
         body: "Venture Fellow @ Xfund.",
       },
       "Placeholder sentence about what I'm focused on at Xfund and the kinds of founders I love meeting.",
+      {
+        lead: "November 2024 – May 2025:",
+        body: "Venture Scout @ Microsoft for Startups.",
+      },
+      "Placeholder sentence about my time scouting for Microsoft for Startups.",
     ],
   },
   {
     number: "03",
     title: "On Campus",
     paragraphs: [
-      "What I'm up to at Stanford — classes I'm loving, clubs and groups I'm part of, and the people I keep learning from.",
+      "What I'm up to at Stanford.",
     ],
-    link: { label: "All adventures", to: "/adventures" },
+    link: { label: "See more", to: "/adventures" },
   },
   {
     number: "04",
     title: "Sidequests",
     paragraphs: [
-      "Detours, experiments, and trips that probably weren't on the plan. Usually fun, occasionally regrettable.",
+      {
+        lead: "Winter 2026:",
+        body: "AI Ethics & Policy @ Oxford.",
+      },
+      "Placeholder sentence about the Oxford term and what I took away from it.",
+      {
+        lead: "Summer 2025:",
+        body: "Auckland FC & New Zealand.",
+      },
+      "Placeholder sentence about the summer in Auckland.",
     ],
-    link: { label: "All writing", to: "/writing" },
+    link: { label: "See more", to: "/writing" },
   },
   {
     number: "05",
     title: "Tidbits",
     paragraphs: [
-      "Books, essays, films, and other small things I keep coming back to. Recs always welcome.",
+      "Fun facts about me.",
     ],
-    link: { label: "All favorites", to: "/favorites" },
+    link: { label: "See more", to: "/favorites" },
   },
 ];
