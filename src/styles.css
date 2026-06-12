@@ -143,6 +143,6 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-mono);
-    font-feature-settings: normal;
+    font-feature-settings: "ss01" on, "cv11" on;
   }
 }
