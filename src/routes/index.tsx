@@ -22,15 +22,14 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <main className="grid md:grid-cols-2">
+      <main className="grid md:grid-cols-[2fr_3fr]">
         {/* Left column — identity */}
         <aside className="px-6 md:px-10 py-12 md:border-r border-border md:sticky md:top-0 md:self-start md:max-h-screen md:overflow-y-auto">
-          <p className="text-sm mb-4">{profile.greeting}</p>
           <h1 className="font-display font-light tracking-tight leading-[0.95] text-6xl md:text-7xl mb-10">
             {profile.name}
           </h1>
 
-          <div className="aspect-square w-40 md:w-44 border border-border bg-muted mb-8 overflow-hidden rounded-sm">
+          <div className="aspect-square w-56 md:w-64 border border-border bg-muted mb-8 overflow-hidden rounded-sm">
             <img src={portrait.url} alt={profile.name} className="h-full w-full object-cover" />
           </div>
 
