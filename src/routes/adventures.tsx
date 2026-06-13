@@ -15,7 +15,7 @@ export const Route = createFileRoute("/adventures")({
   component: () => (
     <ListPage
       title="On Campus"
-      titleClassName="text-xl"
+      titleClassName="text-xl mb-2"
       intro="What I'm up to at Stanford."
       items={[
         { title: "COO @ Stanford BASES", description: "September 2023 – May 2026", bullets: [
@@ -24,8 +24,14 @@ export const Route = createFileRoute("/adventures")({
           "Hosted speaker events with Jamie Dimon, Garry Tan, Jake Paul, etc.",
           "Launched a startup incubator and organized Stanford's largest pitch competition",
         ]},
-        { title: "Counselor @ Camp Kaleidoscope", description: "June 2026" },
-        { title: "Stanford Hacking for Defense", description: "April 2026 – June 2026" },
+        { title: "Counselor @ Camp Kaleidoscope", description: "June 2026", bullets: [
+          "Green Unit counselor, supporting children ages 12-15 with families affected by cancer.",
+          "I lead activities and conversations focused on values of learning & empathy. This is very important to me.",
+        ]},
+        { title: "Stanford Hacking for Defense", description: "April 2026 – June 2026", bullets: [
+          "Learning from the incredible Steve Blank & H4D teaching team.",
+          "My team's project was sponsored by Dep. of War and is now a stealth startup in DIU accelerator",
+        ]},
       ]}
     />
   ),

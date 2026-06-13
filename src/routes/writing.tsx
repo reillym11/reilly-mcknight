@@ -19,7 +19,12 @@ export const Route = createFileRoute("/writing")({
       title="Oxford University"
       titleClassName="text-2xl"
       subtitle="Trinity Term (Winter) 2026"
-      bullets={[]}
+      bullets={[
+        "Studied AI Ethics & Policy within the Oxford Internet Institute.",
+        "Specifically focused on geopolitical tensions & national security concerns influencing international AI safety frameworks and understanding AI from an existentialist or normalist viewpoint.",
+        "Integrated into Oxford student life within Magdalen College, a very special place. Played soccer and rugby for Magdalen.",
+        "Went punting (as pictured) and nearly capsized my boat multiple times",
+      ]}
       imageUrls={[puntingAsset.url, footballAsset.url]}
     />
   ),

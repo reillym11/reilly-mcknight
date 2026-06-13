@@ -30,7 +30,7 @@ export function ListPage({
         </Link>
         {number && <div className="mt-10 mb-2 text-sm text-muted-foreground">{number}</div>}
         <h1 className={`mb-6 ${number ? "" : "mt-10"} ${titleClassName ?? "text-base"}`}>{title}</h1>
-        {intro && <p className="text-sm leading-relaxed max-w-2xl mb-10">{intro}</p>}
+        {intro && <p className="text-sm leading-relaxed max-w-2xl mb-6">{intro}</p>}
         <ul className="divide-y divide-border border-y border-border">
           {items.map((item, i) => (
             <li key={i} className="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
