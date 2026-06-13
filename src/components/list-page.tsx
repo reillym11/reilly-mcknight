@@ -6,6 +6,7 @@ export type ListItem = {
   meta?: string;
   description?: string;
   href?: string;
+  bullets?: string[];
 };
 
 export function ListPage({
