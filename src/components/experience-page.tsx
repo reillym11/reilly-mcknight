@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -13,7 +13,7 @@ export function ExperiencePage({
 }: {
   title: string;
   subtitle: string;
-  bullets: string[];
+  bullets: ReactNode[];
   imageUrl?: string;
   imageUrls?: (string | undefined)[];
   imageAlt?: string;

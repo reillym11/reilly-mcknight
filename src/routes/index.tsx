@@ -24,7 +24,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-      <main className="grid md:grid-cols-[2fr_3fr]">
+      <main className="grid md:grid-cols-[5fr_9fr]">
         {/* Left column — identity */}
         <aside className="px-6 md:px-10 py-12 md:border-r border-border md:sticky md:top-0 md:self-start md:max-h-screen md:overflow-y-auto">
           <h1 className="font-display font-light tracking-tight leading-[0.95] text-6xl md:text-7xl mb-10">
@@ -35,13 +35,13 @@ function Index() {
             <img src={portrait.url} alt={profile.name} className="h-full w-full object-cover" />
           </div>
 
-          <div className="text-sm leading-relaxed max-w-sm space-y-6 mb-12">
+          <div className="text-base leading-relaxed max-w-sm space-y-6 mb-12">
             <p>Studying CS &amp; Economics at Stanford</p>
             <p>Conviction in AI Agents for GTM, open source intelligence, and national security</p>
           </div>
           <a
             href={`mailto:${profile.email}`}
-            className="text-sm underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+            className="text-base underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
           >
             {profile.email}
           </a>
