@@ -41,7 +41,7 @@ export const sections: Section[] = [
         body: "Founding Forward Deployed Eng @ Stealth Startup",
       },
       <>
-        Building in AI OSINT with a cracked team. Accepted into{" "}
+        Building in AI OSINT with a cracked team. Currently in{" "}
         <a
           href="https://www.diu.mil/"
           target="_blank"
@@ -143,6 +143,15 @@ export const sections: Section[] = [
         lead: "Summer 2025:",
         body: "Auckland FC & New Zealand",
       },
+      <>
+        <Link
+          to="/auckland"
+          className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+        >
+          See more
+        </Link>
+        <span aria-hidden className="ml-1 text-foreground/60">›</span>
+      </>,
     ],
     link: { label: "See more", to: "/writing" },
   },
