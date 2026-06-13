@@ -18,9 +18,11 @@ export const Route = createFileRoute("/auckland")({
       titleClassName="text-2xl"
       subtitle="Summer 2025"
       bullets={[
-        "Led Sustainability on the management staff of Auckland FC, a newly-formed professional soccer team. Wore many hats: working with commercial partners, revamping facility operations, and supporting the comms team.",
+        "Led Sustainability on the management staff of Auckland FC, a newly-formed professional soccer team.",
+        "Wore many hats: working with commercial partners, revamping facility operations, and supporting the comms team.",
         "AFC's ownership group under Bill Foley includes Vegas Golden Knights, AFC Bournemouth, etc.",
         "This opportunity was made possible by the incredible Tim Brown, founder of Allbirds and minority owner of AFC.",
+        "After my internship, I took a life-changing solo road trip for 10 days on New Zealand's South Island. I finally conquered my fear of heights by bungy jumping off the 142-feet-tall Kawarau Bridge.",
       ]}
       imageUrls={[undefined, undefined]}
     />
