@@ -14,6 +14,11 @@ const items = [
   <>
     Favorite book: <i>All the Light We Cannot See</i> by Anthony Doerr
   </>,
+  <>
+    Favorite quote: "If you can see it here [in your mind] and have the courage enough to speak it, it will happen.
+    <br />
+    If you truly believe in it, if you become vocal with it, you are creating that Law of Attraction and it will become reality."
+  </>,
 ];
 
 export const Route = createFileRoute("/favorites")({
