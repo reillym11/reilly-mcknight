@@ -4,10 +4,9 @@ import { SiteFooter } from "@/components/site-footer";
 
 const items = [
   "Grew up on the island of Oahu in Hawai'i. Now living in Sonoma County, California",
-  "Lifelong Manchester United fan. Finally made the pilgrimige to Old Trafford for a match this past February",
+  "Lifelong Manchester United fan. I finally made the pilgrimage to Old Trafford for a match this past February",
   <>
-    Passionately opinionated about <i>Star Wars</i> (especially the masterpiece that is{" "}
-    <i>Revenge of the Sith</i>)
+    Passionately opinionated about <i>Star Wars</i> (especially the masterpiece that is <i>Revenge of the Sith</i>)
   </>,
   <>
     Big fan of live theater, particularly <i>Hamilton</i> and <i>The Outsiders</i>
@@ -31,7 +30,10 @@ export const Route = createFileRoute("/favorites")({
   component: () => (
     <div className="min-h-screen bg-background text-foreground">
       <main className="max-w-3xl mx-auto px-6 md:px-10 py-12">
-        <Link to="/" className="text-sm text-muted-foreground hover:text-foreground underline underline-offset-4 decoration-foreground/30">
+        <Link
+          to="/"
+          className="text-sm text-muted-foreground hover:text-foreground underline underline-offset-4 decoration-foreground/30"
+        >
           ‹ back
         </Link>
         <h1 className="text-base mt-10 mb-3">Tidbits</h1>
