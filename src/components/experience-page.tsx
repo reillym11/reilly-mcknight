@@ -35,12 +35,15 @@ export function ExperiencePage({
         </Link>
         <div className="mt-10 mb-10">
           <h1 className={titleClassName ?? "text-base"}>{title}</h1>
-          <p className="text-xs text-muted-foreground mt-1">{subtitle}</p>
+          <p className="text-sm text-muted-foreground mt-1">{subtitle}</p>
         </div>
         <div className="grid md:grid-cols-2 gap-10 md:gap-16">
-          <ul className="text-sm leading-relaxed space-y-3 list-disc pl-5">
+          <ul className="text-sm leading-relaxed space-y-5">
             {bullets.map((b, i) => (
-              <li key={i}>{b}</li>
+              <li key={i} className="flex gap-3">
+                <span aria-hidden="true">–</span>
+                <span>{b}</span>
+              </li>
             ))}
           </ul>
           <div className="space-y-3">
