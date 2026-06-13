@@ -35,8 +35,8 @@ function Index() {
             <img src={portrait.url} alt={profile.name} className="h-full w-full object-cover" />
           </div>
 
-          <div className="text-base leading-relaxed max-w-sm space-y-6 mb-12">
-            <p>Studying CS &amp; Economics at Stanford</p>
+          <div className="text-base leading-relaxed max-w-md space-y-6 mb-12">
+            <p className="whitespace-nowrap">Studying CS &amp; Economics @ Stanford</p>
             <p>Conviction in AI Agents for GTM, open source intelligence, and national security</p>
           </div>
           <a
