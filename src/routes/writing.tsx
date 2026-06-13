@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExperiencePage } from "@/components/experience-page";
+import puntingAsset from "@/assets/oxford-punting.jpg.asset.json";
+import footballAsset from "@/assets/oxford-football.jpg.asset.json";
 
 export const Route = createFileRoute("/writing")({
   head: () => ({
@@ -18,7 +20,7 @@ export const Route = createFileRoute("/writing")({
       titleClassName="text-xl"
       subtitle="Trinity Term (Winter) 2026"
       bullets={[]}
-      imageUrls={[undefined, undefined]}
+      imageUrls={[puntingAsset.url, footballAsset.url]}
     />
   ),
 });
