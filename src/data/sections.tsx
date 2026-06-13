@@ -141,7 +141,19 @@ export const sections: Section[] = [
       </>,
       {
         lead: "Summer 2025:",
-        body: "Auckland FC & New Zealand",
+        body: (
+          <>
+            <a
+              href="https://aucklandfc.co.nz/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
+            >
+              Auckland FC
+            </a>{" "}
+            & New Zealand
+          </>
+        ),
       },
       <>
         <Link
