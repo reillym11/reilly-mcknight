@@ -47,6 +47,16 @@ export function ListPage({
                 {item.description && (
                   <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{item.description}</p>
                 )}
+                {item.bullets && (
+                  <ul className="text-sm leading-relaxed space-y-1.5 mt-2">
+                    {item.bullets.map((b, j) => (
+                      <li key={j} className="flex gap-3">
+                        <span aria-hidden="true">–</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
               {item.meta && <div className="text-sm text-muted-foreground shrink-0">{item.meta}</div>}
             </li>

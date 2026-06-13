@@ -18,7 +18,12 @@ export const Route = createFileRoute("/adventures")({
       titleClassName="text-xl"
       intro="What I'm up to at Stanford."
       items={[
-        { title: "COO @ Stanford BASES", description: "September 2023 – May 2026" },
+        { title: "COO @ Stanford BASES", description: "September 2023 – May 2026", bullets: [
+          "Honored to lead Stanford's largest & oldest entrepreneurship org, a special community of student builders & founders",
+          "I joined as a freshman, served as VP of Startup Dev my sophomore year, and COO my junior year, and recently retired.",
+          "Hosted speaker events with Jamie Dimon, Garry Tan, Jake Paul, etc.",
+          "Launched a startup incubator and organized Stanford's largest pitch competition",
+        ]},
         { title: "Counselor @ Camp Kaleidoscope", description: "June 2026" },
         { title: "Stanford Hacking for Defense", description: "April 2026 – June 2026" },
       ]}
