@@ -11,11 +11,13 @@ export type ListItem = {
 export function ListPage({
   number,
   title,
+  titleClassName,
   intro,
   items,
 }: {
   number?: string;
   title: string;
+  titleClassName?: string;
   intro?: string;
   items: ListItem[];
 }) {
@@ -26,7 +28,7 @@ export function ListPage({
           ‹ back
         </Link>
         {number && <div className="mt-10 mb-2 text-sm text-muted-foreground">{number}</div>}
-        <h1 className={`text-base mb-6 ${number ? "" : "mt-10"}`}>{title}</h1>
+        <h1 className={`mb-6 ${number ? "" : "mt-10"} ${titleClassName ?? "text-base"}`}>{title}</h1>
         {intro && <p className="text-sm leading-relaxed max-w-2xl mb-10">{intro}</p>}
         <ul className="divide-y divide-border border-y border-border">
           {items.map((item, i) => (

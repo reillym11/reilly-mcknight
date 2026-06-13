@@ -153,7 +153,6 @@ export const sections: Section[] = [
         <span aria-hidden className="ml-1 text-foreground/60">›</span>
       </>,
     ],
-    link: { label: "See more", to: "/writing" },
   },
   {
     number: "05",

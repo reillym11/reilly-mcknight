@@ -4,9 +4,9 @@ import { ExperiencePage } from "@/components/experience-page";
 export const Route = createFileRoute("/auckland")({
   head: () => ({
     meta: [
-      { title: "Auckland FC & New Zealand" },
+      { title: "Auckland, New Zealand" },
       { name: "description", content: "Summer 2025 in New Zealand with Auckland FC." },
-      { property: "og:title", content: "Auckland FC & New Zealand" },
+      { property: "og:title", content: "Auckland, New Zealand" },
       { property: "og:description", content: "Summer 2025 in New Zealand with Auckland FC." },
       { property: "og:url", content: "/auckland" },
     ],
@@ -14,9 +14,11 @@ export const Route = createFileRoute("/auckland")({
   }),
   component: () => (
     <ExperiencePage
-      title="Auckland FC & New Zealand"
+      title="Auckland, New Zealand"
+      titleClassName="text-xl"
       subtitle="Summer 2025"
       bullets={[]}
+      imageUrls={[undefined, undefined]}
     />
   ),
 });

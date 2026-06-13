@@ -4,9 +4,9 @@ import { ExperiencePage } from "@/components/experience-page";
 export const Route = createFileRoute("/writing")({
   head: () => ({
     meta: [
-      { title: "AI Ethics & Policy @ Oxford University" },
+      { title: "Oxford University" },
       { name: "description", content: "Trinity Term (Winter) 2026 at Oxford University." },
-      { property: "og:title", content: "AI Ethics & Policy @ Oxford University" },
+      { property: "og:title", content: "Oxford University" },
       { property: "og:description", content: "Trinity Term (Winter) 2026 at Oxford University." },
       { property: "og:url", content: "/writing" },
     ],
@@ -14,9 +14,11 @@ export const Route = createFileRoute("/writing")({
   }),
   component: () => (
     <ExperiencePage
-      title="AI Ethics & Policy @ Oxford University"
+      title="Oxford University"
+      titleClassName="text-xl"
       subtitle="Trinity Term (Winter) 2026"
       bullets={[]}
+      imageUrls={[undefined, undefined]}
     />
   ),
 });
