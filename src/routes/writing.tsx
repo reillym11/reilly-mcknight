@@ -17,7 +17,7 @@ export const Route = createFileRoute("/writing")({
   component: () => (
     <ExperiencePage
       title="Oxford University"
-      titleClassName="text-xl"
+      titleClassName="text-2xl"
       subtitle="Trinity Term (Winter) 2026"
       bullets={[]}
       imageUrls={[puntingAsset.url, footballAsset.url]}
