@@ -9,6 +9,12 @@ const items = [
     Passionately opinionated about <i>Star Wars</i> (especially the masterpiece that is{" "}
     <i>Revenge of the Sith</i>)
   </>,
+  <>
+    Big fan of live theater, particularly <i>Hamilton</i> and <i>The Outsiders</i>
+  </>,
+  <>
+    Favorite book: <i>All the Light We Cannot See</i> by Anthony Doerr
+  </>,
 ];
 
 export const Route = createFileRoute("/favorites")({
