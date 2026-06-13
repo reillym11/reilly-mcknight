@@ -22,7 +22,8 @@ export function ExperiencePage({
   const images = imageUrls ?? (imageUrl ? [imageUrl] : [undefined, undefined]);
   const [idx, setIdx] = useState(0);
   const current = images[idx];
-  const advance = () => setIdx((i) => (i + 1) % images.length);
+  const next = () => setIdx((i) => (i + 1) % images.length);
+  const prev = () => setIdx((i) => (i - 1 + images.length) % images.length);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <main className="max-w-5xl mx-auto px-6 md:px-10 py-12">
@@ -43,16 +44,37 @@ export function ExperiencePage({
             ))}
           </ul>
           <div className="space-y-3">
-            <button
-              type="button"
-              onClick={advance}
-              className="block aspect-square w-full border border-border bg-muted overflow-hidden rounded-sm cursor-pointer"
-              aria-label="Next photo"
-            >
-              {current && (
-                <img src={current} alt={imageAlt ?? title} className="h-full w-full object-cover" />
+            <div className="relative w-full border border-border bg-muted overflow-hidden rounded-sm">
+              {current ? (
+                <img
+                  src={current}
+                  alt={imageAlt ?? title}
+                  className="block w-full h-auto"
+                />
+              ) : (
+                <div className="aspect-square w-full" />
               )}
-            </button>
+              {images.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={prev}
+                    aria-label="Previous photo"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center rounded-full bg-background/80 hover:bg-background text-foreground text-xl border border-border shadow-sm"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    type="button"
+                    onClick={next}
+                    aria-label="Next photo"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center rounded-full bg-background/80 hover:bg-background text-foreground text-xl border border-border shadow-sm"
+                  >
+                    ›
+                  </button>
+                </>
+              )}
+            </div>
             {images.length > 1 && (
               <div className="flex gap-2 justify-center">
                 {images.map((_, i) => (
@@ -61,7 +83,7 @@ export function ExperiencePage({
                     type="button"
                     onClick={() => setIdx(i)}
                     aria-label={`Photo ${i + 1}`}
-                    className={`h-1.5 w-1.5 rounded-full transition-colors ${
+                    className={`h-2 w-2 rounded-full transition-colors ${
                       i === idx ? "bg-foreground" : "bg-foreground/30"
                     }`}
                   />
