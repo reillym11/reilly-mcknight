@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as WritingRouteImport } from './routes/writing'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as FavoritesRouteImport } from './routes/favorites'
+import { Route as AucklandRouteImport } from './routes/auckland'
 import { Route as AdventuresRouteImport } from './routes/adventures'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -30,6 +31,11 @@ const FavoritesRoute = FavoritesRouteImport.update({
   path: '/favorites',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AucklandRoute = AucklandRouteImport.update({
+  id: '/auckland',
+  path: '/auckland',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdventuresRoute = AdventuresRouteImport.update({
   id: '/adventures',
   path: '/adventures',
@@ -44,6 +50,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/adventures': typeof AdventuresRoute
+  '/auckland': typeof AucklandRoute
   '/favorites': typeof FavoritesRoute
   '/projects': typeof ProjectsRoute
   '/writing': typeof WritingRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/adventures': typeof AdventuresRoute
+  '/auckland': typeof AucklandRoute
   '/favorites': typeof FavoritesRoute
   '/projects': typeof ProjectsRoute
   '/writing': typeof WritingRoute
@@ -59,21 +67,42 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/adventures': typeof AdventuresRoute
+  '/auckland': typeof AucklandRoute
   '/favorites': typeof FavoritesRoute
   '/projects': typeof ProjectsRoute
   '/writing': typeof WritingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/adventures' | '/favorites' | '/projects' | '/writing'
+  fullPaths:
+    | '/'
+    | '/adventures'
+    | '/auckland'
+    | '/favorites'
+    | '/projects'
+    | '/writing'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/adventures' | '/favorites' | '/projects' | '/writing'
-  id: '__root__' | '/' | '/adventures' | '/favorites' | '/projects' | '/writing'
+  to:
+    | '/'
+    | '/adventures'
+    | '/auckland'
+    | '/favorites'
+    | '/projects'
+    | '/writing'
+  id:
+    | '__root__'
+    | '/'
+    | '/adventures'
+    | '/auckland'
+    | '/favorites'
+    | '/projects'
+    | '/writing'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AdventuresRoute: typeof AdventuresRoute
+  AucklandRoute: typeof AucklandRoute
   FavoritesRoute: typeof FavoritesRoute
   ProjectsRoute: typeof ProjectsRoute
   WritingRoute: typeof WritingRoute
@@ -102,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FavoritesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/auckland': {
+      id: '/auckland'
+      path: '/auckland'
+      fullPath: '/auckland'
+      preLoaderRoute: typeof AucklandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/adventures': {
       id: '/adventures'
       path: '/adventures'
@@ -122,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AdventuresRoute: AdventuresRoute,
+  AucklandRoute: AucklandRoute,
   FavoritesRoute: FavoritesRoute,
   ProjectsRoute: ProjectsRoute,
   WritingRoute: WritingRoute,
@@ -129,3 +166,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
