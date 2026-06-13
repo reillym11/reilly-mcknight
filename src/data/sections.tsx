@@ -41,7 +41,7 @@ export const sections: Section[] = [
         body: "Founding Forward Deployed Eng @ Stealth Startup",
       },
       <>
-        Building in AI OSINT with a cracked team. Currently in{" "}
+        Building in AI OSINT with an incredible team. Currently in{" "}
         <a
           href="https://www.diu.mil/"
           target="_blank"
@@ -50,7 +50,7 @@ export const sections: Section[] = [
         >
           Defense Innovation Unit
         </a>{" "}
-        DISF-C Accelerator.
+        Accelerator.
       </>,
     ],
   },
