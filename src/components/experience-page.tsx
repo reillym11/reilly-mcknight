@@ -15,7 +15,7 @@ export function ExperiencePage({
   subtitle: string;
   bullets: string[];
   imageUrl?: string;
-  imageUrls?: string[];
+  imageUrls?: (string | undefined)[];
   imageAlt?: string;
   titleClassName?: string;
 }) {
