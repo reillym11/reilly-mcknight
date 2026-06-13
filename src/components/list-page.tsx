@@ -1,12 +1,14 @@
 import { Link } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { SiteFooter } from "@/components/site-footer";
 
 export type ListItem = {
-  title: string;
+  title: ReactNode;
   meta?: string;
   description?: string;
   href?: string;
-  bullets?: string[];
+  bullets?: ReactNode[];
+  titleClassName?: string;
 };
 
 export function ListPage({
@@ -35,7 +37,7 @@ export function ListPage({
           {items.map((item, i) => (
             <li key={i} className="py-5 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
               <div className="max-w-xl">
-                <div className="text-sm">
+                <div className={item.titleClassName ?? "text-sm"}>
                   {item.href ? (
                     <a href={item.href} target="_blank" rel="noreferrer noopener" className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground">
                       {item.title}<span aria-hidden className="ml-0.5 text-foreground/60">↗</span>
