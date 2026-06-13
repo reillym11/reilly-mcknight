@@ -3,10 +3,12 @@ import { Link } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/site-footer";
 
 const items = [
-  "Placeholder one",
-  "Placeholder two",
-  "Placeholder three",
-  "Placeholder four",
+  "Grew up on the island of Oahu in Hawai'i. Now living in Sonoma County, California",
+  "Lifelong Manchester United fan. Finally made the pilgrimige to Old Trafford for a match this past February",
+  <>
+    Passionately opinionated about <i>Star Wars</i> (especially the masterpiece that is{" "}
+    <i>Revenge of the Sith</i>)
+  </>,
 ];
 
 export const Route = createFileRoute("/favorites")({
