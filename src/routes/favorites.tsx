@@ -1,28 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ListPage } from "@/components/list-page";
+import { Link } from "@tanstack/react-router";
+import { SiteFooter } from "@/components/site-footer";
+
+const items = [
+  "Placeholder one",
+  "Placeholder two",
+  "Placeholder three",
+  "Placeholder four",
+];
 
 export const Route = createFileRoute("/favorites")({
   head: () => ({
     meta: [
-      { title: "Favorites — Your Name" },
-      { name: "description", content: "Books, blogs, films, and other recs." },
-      { property: "og:title", content: "Favorites" },
-      { property: "og:description", content: "Books, blogs, films, and other recs." },
+      { title: "Tidbits" },
+      { name: "description", content: "More about me and random things I love." },
+      { property: "og:title", content: "Tidbits" },
+      { property: "og:description", content: "More about me and random things I love." },
       { property: "og:url", content: "/favorites" },
     ],
     links: [{ rel: "canonical", href: "/favorites" }],
   }),
   component: () => (
-    <ListPage
-      number="05"
-      title="Favorites"
-      intro="Things I keep coming back to. Placeholder list — swap in your own."
-      items={[
-        { title: "Book title", meta: "Book", description: "Author — one line on why it stuck." },
-        { title: "Blog name", meta: "Blog", description: "What it's about and why you read it.", href: "https://example.com" },
-        { title: "Film title", meta: "Film", description: "Director — one line on why you love it." },
-        { title: "Album / artist", meta: "Music", description: "One line on why it's on repeat." },
-      ]}
-    />
+    <div className="min-h-screen bg-background text-foreground">
+      <main className="max-w-3xl mx-auto px-6 md:px-10 py-12">
+        <Link to="/" className="text-sm text-muted-foreground hover:text-foreground underline underline-offset-4 decoration-foreground/30">
+          ‹ back
+        </Link>
+        <h1 className="text-base mt-10 mb-3">Tidbits</h1>
+        <p className="text-sm leading-relaxed mb-8">More about me and random things I love</p>
+        <ol className="space-y-3 text-sm leading-relaxed">
+          {items.map((it, i) => (
+            <li key={i} className="flex gap-3">
+              <span className="text-muted-foreground tabular-nums">{String(i + 1).padStart(2, "0")}.</span>
+              <span>{it}</span>
+            </li>
+          ))}
+        </ol>
+      </main>
+      <SiteFooter />
+    </div>
   ),
 });
