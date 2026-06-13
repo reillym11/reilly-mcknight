@@ -5,8 +5,8 @@ import type { Section } from "@/data/sections";
 export function SectionBlock({ section, last }: { section: Section; last?: boolean }) {
   return (
     <section className={`py-6 ${last ? "" : "border-b border-border"}`}>
-      <h2 className="text-base mb-4">{section.title}</h2>
-      <div className="space-y-3 text-sm leading-relaxed">
+      <h2 className="text-lg mb-4">{section.title}</h2>
+      <div className="space-y-3 text-base leading-relaxed">
         {section.paragraphs.map((p, i) => {
           if (
             p &&
