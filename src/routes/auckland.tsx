@@ -18,7 +18,7 @@ export const Route = createFileRoute("/auckland")({
       titleClassName="text-xl"
       subtitle="Summer 2025"
       bullets={[]}
-      imageUrls={[undefined as unknown as string, undefined as unknown as string]}
+      imageUrls={[undefined, undefined]}
     />
   ),
 });
