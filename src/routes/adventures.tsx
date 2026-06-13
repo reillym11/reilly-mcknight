@@ -15,11 +15,12 @@ export const Route = createFileRoute("/adventures")({
   component: () => (
     <ListPage
       title="On Campus"
+      titleClassName="text-xl"
       intro="What I'm up to at Stanford."
       items={[
-        { title: "September 2023 – May 2026: COO @ Stanford BASES", description: "Where, why, and what you took away from it." },
-        { title: "Adventure Two", description: "Where, why, and what you took away from it." },
-        { title: "Adventure Three", description: "Where, why, and what you took away from it." },
+        { title: "COO @ Stanford BASES", description: "September 2023 – May 2026" },
+        { title: "Counselor @ Camp Kaleidoscope", description: "June 2026" },
+        { title: "Stanford Hacking for Defense", description: "April 2026 – June 2026" },
       ]}
     />
   ),
