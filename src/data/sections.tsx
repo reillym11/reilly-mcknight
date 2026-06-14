@@ -102,7 +102,7 @@ export const sections: Section[] = [
           </>
         ),
       },
-      "Inaugural cohort of 6 six students.",
+      "Inaugural cohort. Found high-signal student builders to bless with Azure credits & support",
     ],
   },
   {
