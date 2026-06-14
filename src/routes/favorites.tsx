@@ -14,8 +14,8 @@ const items = [
   <>
     Favorite book: <i>All the Light We Cannot See</i> by Anthony Doerr
   </>,
-  <>
-    Favorite quote: <i>"If you can see it here [in your mind] and have the courage enough to speak it, it will happen."</i>)
+    <>
+    Favorite quote: <i>"If you can see it here [in your mind] and have the courage enough to speak it, it will happen."</i>
   </>,
 ];
 
