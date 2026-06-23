@@ -22,7 +22,7 @@ export const Route = createFileRoute("/writing")({
       subtitle="Trinity Term: Winter 2026"
       bullets={[
         "Studied AI Ethics & Policy within the Oxford Internet Institute.",
-        "Specifically focused on geopolitical tensions & national security concerns influencing international AI safety frameworks and understanding AI from an existentialist or normalist viewpoint.",
+        "Focused on geopolitical tensions & national security concerns influencing international AI safety frameworks and understanding AI through existentialism or determinism.",
         "Integrated into Oxford student life at Magdalen College where I played soccer (football) and rugby.",
         "Went punting (as pictured) and nearly capsized my boat multiple times. Steering proved to be harder than it looked.",
       ]}
