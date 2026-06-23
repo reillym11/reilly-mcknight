@@ -41,7 +41,7 @@ export const Route = createFileRoute("/adventures")({
         ]},
         { title: "Stanford Hacking for Defense", titleClassName: "text-base", description: "April 2026 – June 2026", bullets: [
           <>Learning from the incredible <A href="https://www.linkedin.com/in/steveblank">Steve Blank</A>.</>,
-          <>My team's project was sponsored by Department of Defense and is now a stealth startup in the <A href="https://www.diu.mil/">DIU</A> accelerator.</>,
+          <>My team is now continuing to build in the <A href="https://www.diu.mil/">DIU</A> accelerator.</>,
         ]},
       ]}
     />

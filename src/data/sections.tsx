@@ -41,7 +41,7 @@ export const sections: Section[] = [
         body: "Founding Forward Deployed Eng @ Stealth Startup",
       },
       <>
-        Building in AI OSINT with an incredible team. Currently in{" "}
+        Building in AI OSINT. Currently in{" "}
         <a
           href="https://www.diu.mil/"
           target="_blank"
@@ -102,7 +102,7 @@ export const sections: Section[] = [
           </>
         ),
       },
-      "Inaugural cohort. Found high-signal student builders to bless with Azure credits & support",
+      "Inaugural cohort. Found outlier student builders to accelerate with Azure credits & support",
     ],
   },
   {
