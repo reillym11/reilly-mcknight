@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Build for Vercel's serverless runtime. Nitro's `vercel` preset emits the
+  // Vercel Build Output API v3 layout into `.vercel/output/`, which Vercel
+  // picks up automatically — no framework setting or rewrites needed.
+  nitro: { preset: "vercel" },
 });
