@@ -1,85 +1,42 @@
-# Personal Portfolio — Mono-Editorial (Dario-style reference)
+## Problem
 
-Single-page personal site closely modeled on the attached reference. Light cream/white background, monospace body throughout, large thin display font for the name, two-column desktop layout. All content is realistic placeholders you can edit in one data file later.
-
-## Layout (matches reference exactly)
+The profile photo (and three other images: `oxford-football`, `oxford-punting`, `auckland-trophy`) are stored as Lovable CDN assets. Their `.asset.json` pointers give a **root-relative** URL:
 
 ```
-┌──────────────────────────────────────────────────────────┐
-│  [avatar] Y.N.I                          X  LinkedIn  GH │
-├──────────────────────┬───────────────────────────────────┤
-│ Hi! I'm              │  01                                │
-│                      │                                    │
-│ Your Name            │  Work                              │
-│ (large thin display) │  [mono paragraphs w/ underlined    │
-│                      │   links + ↗ arrows]                │
-│ [portrait photo      │  ──────────────────────────────    │
-│  placeholder]        │  02                                │
-│                      │  Projects                          │
-│ Short bio paragraph  │  [paragraph]                       │
-│ in mono...           │  All projects ›                    │
-│                      │  ──────────────────────────────    │
-│ you@stanford.edu     │  03 Adventures ...                 │
-│                      │  04 Writing ...                    │
-│                      │  05 Favorites ...                  │
-└──────────────────────┴───────────────────────────────────┘
+/__l5e/assets-v1/<id>/portrait.jpeg
 ```
 
-On mobile: header collapses, left column stacks above right column.
+That path is served by Lovable's infrastructure. On the Lovable-hosted preview/published URL it works. On your Vercel deployment, `https://your-app.vercel.app/__l5e/...` returns 404 because Vercel doesn't host that route — so the `<img>` breaks.
 
-## Visual system
+## Fix
 
-- **Background**: warm off-white `oklch(0.985 0.005 90)` (matches the cream tone in the screenshot)
-- **Foreground**: near-black `oklch(0.18 0 0)`
-- **Borders/dividers**: light gray `oklch(0.88 0 0)`, 1px, used between sections AND as the vertical column split
-- **Typography**:
-  - Body / labels / numbers: **JetBrains Mono** (loaded via `<link>` in `__root.tsx`)
-  - Display name only: **Cormorant** or **Italiana** (thin, elegant) — large, ~5–7rem
-- **Links**: underlined, with a small `↗` glyph for external links
-- **No motion, no gradients, no shadows** — restraint is the aesthetic
+Rewrite the asset URL at usage time to point at Lovable's CDN absolute origin, so the browser fetches from Lovable regardless of where the page is hosted.
 
-## Sections (placeholder content using the copy you provided)
+Add a tiny helper:
 
-1. **Work** — three mono paragraphs: current role, past role, investing
-2. **Projects** — short intro + "All projects ›" link
-3. **Adventures** — short intro + "All adventures ›" link
-4. **Writing** — short intro + "All writing ›" link
-5. **Favorites** — short intro + "All favorites ›" link
+```ts
+// src/lib/asset-url.ts
+const CDN_ORIGIN = "https://cdn.lovable.dev"; // Lovable assets CDN origin
 
-The "All X ›" links route to placeholder sub-pages (`/projects`, `/adventures`, `/writing`, `/favorites`) each containing a simple mono list with placeholder rows ready for you to fill in.
-
-## Files
-
-```
-src/routes/
-  __root.tsx         (font links + meta defaults)
-  index.tsx          (entire homepage)
-  projects.tsx       (placeholder list)
-  adventures.tsx     (placeholder list)
-  writing.tsx        (placeholder list)
-  favorites.tsx      (placeholder list)
-src/components/
-  site-header.tsx    (initials + social icons)
-  section.tsx        (numbered section wrapper: "01" + title + body + divider)
-  ext-link.tsx       (underlined link with ↗)
-src/data/
-  profile.ts         (name, initials, email, social URLs, bio, photo)
-  sections.ts        (the 5 sections' copy — single edit point)
+export function assetUrl(asset: { url: string }) {
+  return asset.url.startsWith("/__l5e/") ? `${CDN_ORIGIN}${asset.url}` : asset.url;
+}
 ```
 
-Photo uses a placeholder portrait (generated abstract or initials block) until you provide a real one.
+Then update the four call sites that render `.asset.json` images:
 
-## Technical details
+- `src/routes/index.tsx` — portrait
+- `src/routes/auckland.tsx` — auckland-trophy
+- `src/routes/writing.tsx` — oxford-football, oxford-punting
 
-- Update `src/styles.css`: new oklch tokens, `@theme inline` mappings, register JetBrains Mono + display serif as `--font-mono` / `--font-display`
-- Each route defines its own `head()` with unique title/description; root sets sitewide defaults and Geist/JetBrains/Cormorant font `<link>` tags
-- Lucide icons for X / LinkedIn / GitHub in the header
-- No backend, no Cloud, no extra packages beyond what's already installed
+Change `src={portrait.url}` → `src={assetUrl(portrait)}` etc.
 
-## Out of scope
+No changes to the `.asset.json` files themselves, no re-uploads, no Vercel config changes.
 
-- Real photo (placeholder for now)
-- Sub-page real content (placeholder rows)
-- Dark mode (reference is light-only; can add later)
+## Verification
 
-After approval I'll build it; swapping in your real resume/LinkedIn content later is editing `src/data/profile.ts` + `src/data/sections.ts`.
+After the edit I'll confirm the absolute CDN origin actually serves these files (a single HEAD against the portrait URL), then the production build picks up the change on the next Vercel deploy.
+
+## Open question
+
+Before I implement: do you want me to (a) use the absolute Lovable CDN URL as above — fastest, zero infra — or (b) pull the four images back into the repo as regular Vite-imported assets so the site has no dependency on Lovable's CDN at all? Option (b) is more portable but adds ~few hundred KB to the repo. I'll default to (a) unless you say otherwise.
