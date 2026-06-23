@@ -77,12 +77,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Your Name — Stanford CS & Economics" },
+      { title: "Reilly McKnight — Stanford CS & Econ" },
       { name: "description", content: "Personal site of an undergrad studying CS and Economics at Stanford." },
-      { property: "og:title", content: "Your Name" },
+      { property: "og:title", content: "Reilly McKnight — Stanford CS & Econ" },
       { property: "og:description", content: "Personal site of an undergrad studying CS and Economics at Stanford." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Reilly McKnight — Stanford CS & Econ" },
+      { name: "twitter:description", content: "Personal site of an undergrad studying CS and Economics at Stanford." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b123b5fd-972c-4f51-92e2-c74ec8217142/id-preview-13de9717--be5a31d1-ca47-4903-a2b3-35bb497c5c6d.lovable.app-1781421607275.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b123b5fd-972c-4f51-92e2-c74ec8217142/id-preview-13de9717--be5a31d1-ca47-4903-a2b3-35bb497c5c6d.lovable.app-1781421607275.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
