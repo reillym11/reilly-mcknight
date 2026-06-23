@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SectionBlock } from "@/components/section-block";
 import portrait from "@/assets/portrait.jpeg.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,7 +33,7 @@ function Index() {
           </h1>
 
           <div className="aspect-square w-56 md:w-64 border border-border bg-muted mb-8 overflow-hidden rounded-sm">
-            <img src={portrait.url} alt={profile.name} className="h-full w-full object-cover" />
+            <img src={assetUrl(portrait)} alt={profile.name} className="h-full w-full object-cover" />
           </div>
 
           <div className="text-base leading-relaxed max-w-md space-y-6 mb-12">
