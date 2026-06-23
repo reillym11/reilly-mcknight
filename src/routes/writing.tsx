@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ExperiencePage } from "@/components/experience-page";
 import puntingAsset from "@/assets/oxford-punting.jpg.asset.json";
 import footballAsset from "@/assets/oxford-football.jpg.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 
 export const Route = createFileRoute("/writing")({
   head: () => ({
@@ -25,7 +26,7 @@ export const Route = createFileRoute("/writing")({
         "Integrated into Oxford student life at Magdalen College where I played soccer (football) and rugby.",
         "Went punting (as pictured) and nearly capsized my boat multiple times. Steering proved to be harder than it looked.",
       ]}
-      imageUrls={[puntingAsset.url, footballAsset.url]}
+      imageUrls={[assetUrl(puntingAsset), assetUrl(footballAsset)]}
     />
   ),
 });

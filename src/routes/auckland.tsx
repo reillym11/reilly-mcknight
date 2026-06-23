@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExperiencePage } from "@/components/experience-page";
 import trophyAsset from "@/assets/auckland-trophy.jpeg.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 
 const A = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a
@@ -36,7 +37,7 @@ export const Route = createFileRoute("/auckland")({
         <>This opportunity was made possible by <A href="https://www.linkedin.com/in/timbrown64/">Tim Brown</A>, founder of <A href="https://www.allbirds.com/?srsltid=AfmBOor2Kjg7buvmL4MicOH7l7uiShl3REmPEJqWbv4BQamhOqFzpdjU">Allbirds</A> and minority owner of AFC.</>,
         "After my internship, I took a life-changing 10-day solo road trip through New Zealand's South Island. I finally faced my fear of heights by bungy jumping off the 142-foot-tall Kawarau Bridge.",
       ]}
-      imageUrls={[trophyAsset.url, undefined]}
+      imageUrls={[assetUrl(trophyAsset), undefined]}
     />
   ),
 });
