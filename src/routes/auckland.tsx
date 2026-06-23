@@ -37,7 +37,7 @@ export const Route = createFileRoute("/auckland")({
         <>This opportunity was made possible by <A href="https://www.linkedin.com/in/timbrown64/">Tim Brown</A>, founder of <A href="https://www.allbirds.com/?srsltid=AfmBOor2Kjg7buvmL4MicOH7l7uiShl3REmPEJqWbv4BQamhOqFzpdjU">Allbirds</A> and minority owner of AFC.</>,
         "After my internship, I took a life-changing 10-day solo road trip through New Zealand's South Island. I finally faced my fear of heights by bungy jumping off the 142-foot-tall Kawarau Bridge.",
       ]}
-      imageUrls={[assetUrl(trophyAsset), undefined]}
+      imageUrls={[assetUrl(trophyAsset)]}
     />
   ),
 });
