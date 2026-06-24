@@ -6,9 +6,6 @@ export function SiteFooter() {
       <a href={profile.socials.linkedin} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity">
         LinkedIn
       </a>
-      <a href={profile.socials.resume} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity">
-        Resume
-      </a>
       <a href={profile.socials.github} target="_blank" rel="noreferrer noopener" className="hover:opacity-60 transition-opacity">
         Github
       </a>

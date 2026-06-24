@@ -23,7 +23,7 @@ export const Route = createFileRoute("/writing")({
       bullets={[
         "Studied AI Ethics & Policy within the Oxford Internet Institute.",
         "Focused on geopolitical tensions & national security concerns influencing international AI safety frameworks and understanding AI through existentialism or determinism.",
-        "Integrated into Oxford student life at Magdalen College where I played soccer (football) and rugby.",
+        "Integrated into Oxford student life at Magdalen College where I played soccer and rugby.",
         "Went punting (as pictured) and nearly capsized my boat multiple times. Steering proved to be harder than it looked.",
       ]}
       imageUrls={[assetUrl(puntingAsset), assetUrl(footballAsset)]}
