@@ -5,7 +5,7 @@ export const profile = {
   email: "reillym@stanford.edu",
   bio: "Studying CS & Economics at Stanford. Conviction in AI Agents for GTM, open source intelligence, and national security. I want to be in the room where it happens.",
   socials: {
-    linkedin: "https://www.linkedin.com/in/reilly-mcknight/",
+    linkedin: "https://www.linkedin.com/in/reilly-mcknight/?skipRedirect=true",
     github: "https://github.com/reillym11",
     resume: "#",
   },
