@@ -32,11 +32,11 @@ function Index() {
             {profile.name}
           </h1>
 
-          <div className="aspect-square w-56 md:w-64 border border-border bg-muted mb-8 overflow-hidden rounded-sm">
+          <div className="aspect-square w-64 md:w-72 border border-border bg-muted mb-8 overflow-hidden rounded-sm">
             <img src={assetUrl(portrait)} alt={profile.name} className="h-full w-full object-cover" />
           </div>
 
-          <div className="text-base leading-relaxed max-w-md space-y-6 mb-12">
+          <div className="text-lg leading-relaxed max-w-md space-y-6 mb-12">
             <p className="whitespace-nowrap">Studying CS &amp; Economics @ Stanford</p>
             <p>
               Conviction in AI Agents for GTM,
