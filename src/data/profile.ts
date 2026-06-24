@@ -5,9 +5,8 @@ export const profile = {
   email: "reillym@stanford.edu",
   bio: "Studying CS & Economics at Stanford. Conviction in AI Agents for GTM, open source intelligence, and national security. I want to be in the room where it happens.",
   socials: {
-    twitter: "https://twitter.com/yourhandle",
-    linkedin: "https://linkedin.com/in/yourhandle",
-    github: "https://github.com/yourhandle",
+    linkedin: "https://www.linkedin.com/in/reilly-mcknight/",
+    github: "https://github.com/reillym11",
     resume: "#",
   },
   // Replace with a real portrait URL or imported asset later.
