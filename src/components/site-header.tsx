@@ -18,11 +18,11 @@ export function SiteHeader() {
 
   return (
     <header className="flex items-center justify-between gap-5 pl-6 md:pl-10 pr-4 md:pr-6 py-4 border-b border-border text-sm">
-      <span className="italic text-base md:text-lg text-foreground/80">
+      <span className="italic text-lg md:text-xl text-foreground/80">
         {typed}
         <span aria-hidden className="inline-block w-px h-4 align-middle ml-0.5 bg-foreground/60 animate-pulse" />
       </span>
-      <span className="text-xs tracking-wider text-foreground/70">{profile.initials}</span>
+      <span className="text-sm tracking-wider text-foreground/70">{profile.initials}</span>
     </header>
   );
 }
