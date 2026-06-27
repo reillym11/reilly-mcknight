@@ -35,13 +35,13 @@ export const sections: Section[] = [
           </>
         ),
       },
-      "Forward Deployed Engineering. Automating sales workflows for leading GTM teams in tech.",
+      "Forward Deployed Engineering. Automating sales workflows for leading enterprise GTM teams in tech.",
       {
         lead: "March 2026 – Present:",
         body: "Founding Forward Deployed Eng @ Stealth Startup",
       },
       <>
-        Building in AI OSINT. Currently in{" "}
+        Building in AI open source intelligence. Currently in{" "}
         <a
           href="https://www.diu.mil/"
           target="_blank"
