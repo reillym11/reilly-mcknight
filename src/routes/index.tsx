@@ -10,13 +10,19 @@ import { assetUrl } from "@/lib/asset-url";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `${profile.name} — Stanford CS & Economics` },
-      { name: "description", content: profile.bio.slice(0, 160) },
-      { property: "og:title", content: profile.name },
-      { property: "og:description", content: profile.bio.slice(0, 160) },
-      { property: "og:url", content: "/" },
+      { title: "Reilly McKnight" },
+      { name: "description", content: "CS & Economics student at Stanford. Building AI Agents at Attention." },
+      { property: "og:title", content: "Reilly McKnight" },
+      { property: "og:description", content: "CS & Economics student at Stanford. Building AI Agents for sales automation, open-source intelligence & national security." },
+      { property: "og:image", content: "https://www.reillymcknight.com/preview-image.png" },
+      { property: "og:url", content: "https://www.reillymcknight.com" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Reilly McKnight" },
+      { name: "twitter:description", content: "CS & Economics student at Stanford. Building AI Agents for sales automation, open-source intelligence & national security." },
+      { name: "twitter:image", content: "https://www.reillymcknight.com/preview-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://www.reillymcknight.com" }],
   }),
   component: Index,
 });
