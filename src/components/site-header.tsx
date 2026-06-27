@@ -22,7 +22,7 @@ export function SiteHeader() {
         {typed}
         <span aria-hidden className="inline-block w-px h-4 align-middle ml-0.5 bg-foreground/60 animate-pulse" />
       </span>
-      <span className="text-xs tracking-wider text-foreground/70">{profile.initials}</span>
+      <span className="text-sm tracking-wider text-foreground/70">{profile.initials}</span>
     </header>
   );
 }
