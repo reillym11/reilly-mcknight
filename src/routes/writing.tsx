@@ -24,7 +24,7 @@ export const Route = createFileRoute("/writing")({
         "Studied AI Ethics & Policy within the Oxford Internet Institute.",
         "Focused on geopolitical tensions & national security concerns influencing international AI safety frameworks and understanding AI through existentialism or determinism.",
         "Integrated into Oxford student life at Magdalen College where I played soccer and rugby.",
-        "Went punting (as pictured) and nearly capsized my boat multiple times. Steering proved to be harder than it looked.",
+        "Went punting (as pictured) and nearly capsized my boat multiple times.",
       ]}
       imageUrls={[assetUrl(puntingAsset), assetUrl(footballAsset)]}
     />

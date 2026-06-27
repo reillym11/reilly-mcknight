@@ -41,7 +41,7 @@ function Index() {
             <p>
               Conviction in AI Agents for GTM,
               <br />
-              open source intelligence,
+              open-source intelligence,
               <br />
               &amp; national security
             </p>
