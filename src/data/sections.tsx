@@ -59,7 +59,7 @@ export const sections: Section[] = [
     title: "Investing",
     paragraphs: [
       {
-        lead: "September 2024 – Present:",
+        lead: "September 2024 – June 2026:",
         body: (
           <>
             Venture Fellow @{" "}
@@ -75,7 +75,7 @@ export const sections: Section[] = [
         ),
       },
       <>
-        Working with{" "}
+        Worked with{" "}
         <a
           href="https://www.linkedin.com/in/brandonfarwell/"
           target="_blank"
@@ -84,7 +84,7 @@ export const sections: Section[] = [
         >
           Brandon Farwell
         </a>{" "}
-        to back lateral-thinking student founders
+        to back lateral-thinking student founders.
       </>,
       {
         lead: "November 2024 – May 2025:",
@@ -168,14 +168,14 @@ export const sections: Section[] = [
   },
   {
     number: "05",
-    title: "Tidbits",
+    title: "Miscellaneous",
     paragraphs: [
       <>
         <Link
           to="/favorites"
           className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
         >
-          More about me and random things I love
+          More about me and things I love
         </Link>
         <span aria-hidden className="ml-1 text-foreground/60">
           ›

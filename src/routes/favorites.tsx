@@ -22,10 +22,10 @@ const items = [
 export const Route = createFileRoute("/favorites")({
   head: () => ({
     meta: [
-      { title: "Tidbits" },
-      { name: "description", content: "More about me and random things I love." },
-      { property: "og:title", content: "Tidbits" },
-      { property: "og:description", content: "More about me and random things I love." },
+      { title: "Miscellaneous" },
+      { name: "description", content: "More about me and things I love." },
+      { property: "og:title", content: "Miscellaneous" },
+      { property: "og:description", content: "More about me and things I love." },
       { property: "og:url", content: "/favorites" },
     ],
     links: [{ rel: "canonical", href: "/favorites" }],
@@ -39,9 +39,9 @@ export const Route = createFileRoute("/favorites")({
         >
           ‹ back
         </Link>
-        <h1 className="text-base mt-10 mb-3">Tidbits</h1>
-      <p className="text-base leading-relaxed mb-10">More about me and random things I love</p>
-      <ol className="space-y-5 text-base leading-relaxed">
+        <h1 className="text-base mt-10 mb-3">Miscellaneous</h1>
+      <p className="text-base leading-relaxed mb-10">More about me and things I love</p>
+      <ol className="space-y-6 text-base leading-relaxed">
           {items.map((it, i) => (
             <li key={i} className="flex gap-3">
               <span className="text-muted-foreground tabular-nums">{String(i + 1).padStart(2, "0")}.</span>
