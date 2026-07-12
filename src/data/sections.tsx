@@ -41,7 +41,7 @@ export const sections: Section[] = [
         body: "Founding Forward Deployed Eng @ Stealth Startup",
       },
       <>
-        Building in AI open-source intel. Currently in{" "}
+        Building in AI open-source intel. Currently in DoD{" "}
         <a
           href="https://www.diu.mil/"
           target="_blank"
