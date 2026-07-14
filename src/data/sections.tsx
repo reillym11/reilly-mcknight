@@ -38,20 +38,20 @@ export const sections: Section[] = [
       "Forward Deployed Engineering. Automating workflows for leading enterprise GTM teams in tech.",
       {
         lead: "March 2026 – Present:",
-        body: "Founding Forward Deployed Eng @ Stealth Startup",
+        body: "Founding FDE @ Stealth Defense Startup",
       },
       <>
-        Building in AI open-source intel. Currently in DoD{" "}
+        Building in AI open-source intel. Currently in{" "}
         <a
           href="https://www.diu.mil/"
           target="_blank"
           rel="noreferrer noopener"
           className="underline underline-offset-4 decoration-foreground/40 hover:decoration-foreground"
         >
-          Defense Innovation Unit
+          DoD Defense Innovation Unit
         </a>{" "}
         Accelerator.
-      </>,
+      </>
     ],
   },
   {
