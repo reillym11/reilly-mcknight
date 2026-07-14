@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 
 const items = [
   "Grew up on the island of Oahu in Hawai'i. Now living in Sonoma County, California",
-  "Lifelong Manchester United fan. I finally made the pilgrimage to Old Trafford for a match this past February",
+  "Lifelong Manchester United supporter. I finally made the pilgrimage to Old Trafford for a match this past February",
   <>
     Passionately opinionated about <i>Star Wars</i> (especially the masterpiece that is <i>Revenge of the Sith</i>)
   </>,
